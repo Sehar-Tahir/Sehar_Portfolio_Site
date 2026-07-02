@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+   /* font-family: "Urbanist", sans-serif;   */
+
+}
+
+body {
+  @apply bg-paper dark:bg-base text-ink dark:text-mist transition-colors duration-300;
+}
+
+::selection {
+  @apply bg-accent/30 text-ink dark:text-mist;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-paper dark:bg-base;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent/40 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent/70;
+}
+
+/* Scroll-reveal utility, toggled by IntersectionObserver in Reveal.jsx */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-float {
+    animation: none;
+  }
+}
+
+/* Route-style eyebrow label used across sections */
+.eyebrow {
+  @apply font-mono text-xs tracking-wide text-accent dark:text-accent-soft inline-flex items-center gap-2;
+}
+
+/* Focus visibility for keyboard nav */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #8B7CF6;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
