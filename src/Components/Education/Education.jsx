@@ -15,7 +15,7 @@ const education = [
   {
     degree: 'Intermediate - Pre Medical',
     org: 'Alpine College, Khanpur',
-    period: '2020 — 2022',
+    period: '2020 - 2022',
     grade: '90.45%',
     desc: 'Completed intermediate education with a strong academic record in the pre-medical group.',
   },
