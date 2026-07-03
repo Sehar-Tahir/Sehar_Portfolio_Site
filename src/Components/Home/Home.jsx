@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div
       id="Home"
-      className="relative w-full overflow-hidden pt-32 pb-20 md:pt-32 md:pb-28 px-6 md:px-14
+      className="relative w-full overflow-hidden pt-32 pb-20 md:pt-28 md:pb-28 px-6 md:px-14
       bg-paper dark:bg-base transition-colors duration-300"
     >
       {/* Blueprint dot/grid backdrop */}

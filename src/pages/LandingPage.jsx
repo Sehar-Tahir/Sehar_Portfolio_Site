@@ -1,13 +1,13 @@
-import About from "../components/About/About"
-import Home from "../components/Home/Home"
-import Navbar from "../components/Navbar/Navbar"
-import Services from "../components/Services/Services"
-import Skills from "../components/Skills/Skills"
-import Projects from "../components/Projects/Projects"
-import Footer from "../components/Footer/Footer"
-import Experience from "../components/Experience/Experience"
-import Education from "../components/Education/Education"
-import Certificates from "../components/Certifications/Certificates"
+import About from "../Components/About/About"
+import Home from "../Components/Home/Home"
+import Navbar from "../Components/Navbar/Navbar"
+import Services from "../Components/Services/Services"
+import Skills from "../Components/Skills/Skills"
+import Projects from "../Components/Projects/Projects"
+import Footer from "../Components/Footer/Footer"
+import Experience from "../Components/Experience/Experience"
+import Education from "../Components/Education/Education"
+import Certificates from "../Components/Certifications/Certificates"
 
 const LandingPage = () => {
   return (

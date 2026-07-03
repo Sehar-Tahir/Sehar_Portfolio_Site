@@ -10,7 +10,7 @@ const ProjectCard = ({ title, tec, imgsrc, demo, git, type, desc }) => {
 
       <div className="relative overflow-hidden aspect-[16/10]">
         <img
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
           src={imgsrc}
           alt={`${title} preview`}
         />
