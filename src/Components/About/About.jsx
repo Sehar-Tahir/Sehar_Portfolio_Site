@@ -1,11 +1,12 @@
 import Profile_icon from '../../assets/profile.jpg'
 import SectionHeading from '../Common/SectionHeading'
 import Reveal from '../Common/Reveal'
+import CountUp from '../Common/CountUp'
 
 const stats = [
-  { value: '35+', label: 'Projects shipped' },
+  { value: '36+', label: 'Projects shipped' },
   { value: '3+', label: 'Years of experience' },
-  { value: '10+', label: 'Happy clients' },
+  { value: '15+', label: 'Happy clients' },
 
 ]
 
@@ -60,8 +61,8 @@ const About = () => {
             <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-ink/10 dark:border-base-line">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-display text-3xl md:text-4xl font-semibold text-accent dark:text-accent-soft">
-                    {stat.value}
+                  <p className="font-display text-3xl md:text-4xl font-semibold text-accent dark:text-signal">
+                    <CountUp value={stat.value} />
                   </p>
                   <p className="text-xs md:text-sm mt-1 text-ink-muted dark:text-mist-muted">
                     {stat.label}

@@ -3,13 +3,17 @@ import { BiDownload } from 'react-icons/bi'
 import { LuArrowUpRight } from 'react-icons/lu'
 import Reveal from '../Common/Reveal'
 
-const stages = ['Design', 'Build', 'Automate', 'Ship']
+// const stages = ['Design', 'Build', 'Automate', 'Ship']
+const tracks = [
+  { label: 'web dev', stages: ['Design', 'Build', 'Test', 'Deploy'] },
+  { label: 'ghl', stages: ['Map', 'Build', 'Automate', 'Launch'] },
+]
 
 const Home = () => {
   return (
     <div
       id="Home"
-      className="relative w-full overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-14
+      className="relative w-full overflow-hidden pt-32 pb-20 md:pt-32 md:pb-28 px-6 md:px-14
       bg-paper dark:bg-base transition-colors duration-300"
     >
       {/* Blueprint dot/grid backdrop */}
@@ -20,7 +24,7 @@ const Home = () => {
         {/* Left — headline */}
         <div>
           <Reveal>
-            <span className="eyebrow mb-6">
+            <span className="eyebrow mb-6 dark:text-signal">
               <span className="w-1.5 h-1.5 rounded-full bg-signal animate-pulse" />
               Available for Freelance &amp; Remote work.
             </span>
@@ -62,7 +66,7 @@ const Home = () => {
               <a href="#Contact">
                 <button className="flex items-center gap-2 px-5 py-3 rounded-full border border-ink/15 dark:border-base-line
                   text-ink dark:text-mist font-medium text-sm hover:border-accent hover:text-accent transition-all duration-200">
-                  Hire Me <LuArrowUpRight />
+                  Let&#39;s talk  <LuArrowUpRight />
                 </button>
               </a>
             </div>
@@ -70,7 +74,7 @@ const Home = () => {
         </div>
 
         {/* Right — signature workflow graphic */}
-        <Reveal delay={200} className="hidden md:block">
+        {/* <Reveal delay={200} className="hidden md:block">
           <div className="relative rounded-3xl border border-ink/10 dark:border-base-line
             bg-paper-card/60 dark:bg-base-elevated/50 backdrop-blur-sm p-8 shadow-node-light dark:shadow-node">
             <p className="eyebrow mb-8">/workflow</p>
@@ -107,7 +111,60 @@ const Home = () => {
               React frontend or a GHL automation.
             </p>
           </div>
+        </Reveal> */}
+
+        {/* Right — signature workflow graphic */}
+        <Reveal delay={200} className="hidden md:block">
+          <div className="relative rounded-3xl border border-ink/10 dark:border-base-line
+    bg-paper-card/60 dark:bg-base-elevated/50 backdrop-blur-sm p-9 shadow-node-light dark:shadow-node">
+            <p className="eyebrow mb-8 text-sm">/workflow</p>
+
+            <div className="grid grid-cols-2 gap-10">
+              {tracks.map((track) => (
+                <div key={track.label}>
+                  <p className="font-mono text-sm uppercase tracking-wide text-accent dark:text-accent-soft mb-7 font-medium">
+                    /{track.label}
+                  </p>
+                  <div className="flex flex-col gap-0">
+                    {track.stages.map((stage, i) => (
+                      <div key={stage} className="flex items-start gap-3.5">
+                        <div className="flex flex-col items-center">
+                          <span
+                            className={`w-4 h-4 rounded-full border-2 shrink-0 ${i === track.stages.length - 1
+                                ? 'bg-signal border-signal'
+                                : 'bg-transparent border-accent'
+                              }`}
+                          />
+                          {i < track.stages.length - 1 && (
+                            <span className="w-px h-9 bg-gradient-to-b from-accent/60 to-accent/10" />
+                          )}
+                        </div>
+                        <span
+                          className={`font-mono text-base leading-none pt-0.5 ${i === track.stages.length - 1
+                              ? 'text-signal font-semibold'
+                              : 'text-ink dark:text-mist font-medium'
+                            }`}
+                          style={{ marginBottom: i < track.stages.length - 1 ? '1.6rem' : 0 }}
+                        >
+                          {stage}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-sm text-ink-muted dark:text-mist-muted leading-relaxed border-t border-ink/10 dark:border-base-line pt-6 mt-8">
+              {/* Two disciplines, one pipeline — a frontend build and a GHL automation
+              both move through the same stages, end to end. */}
+              Every project moves through the pipeline whether it&#39;s a
+              React Frontend Project or a GHL Automation Project.
+            </p>
+          </div>
         </Reveal>
+
+
       </div>
     </div>
   )

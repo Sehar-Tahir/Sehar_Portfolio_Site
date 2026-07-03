@@ -73,7 +73,7 @@ const Services = () => {
             px-6 py-5 flex items-center gap-3 text-xs md:text-sm font-mono text-ink-muted dark:text-mist-muted">
             <LuCode2 size={16} className="text-accent shrink-0" />
             Also comfortable moving between the two mid-project. Building the
-            site for one business and the automation for the other as well. 
+            site for one business and the automation for the other. 
             Managing multiple projects simultaneously and keeping them all on track is a skill I&#39;ve honed over the years.
           </div>
         </Reveal>
