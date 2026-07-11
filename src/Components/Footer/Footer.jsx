@@ -1,14 +1,17 @@
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { LuLinkedin, LuGithub, LuMail, LuSend } from 'react-icons/lu'
+import { LuLinkedin, LuGithub, LuMail, LuSend, LuWorkflow } from 'react-icons/lu'
 import { TbBrandFiverr } from 'react-icons/tb'
 import { FaSquareUpwork } from 'react-icons/fa6'
 import SectionHeading from '../Common/SectionHeading'
 import Reveal from '../Common/Reveal'
+import ScrollToTop from './ScrollToTop'
+
 
 const socials = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sehartahir', Icon: LuLinkedin },
   { label: 'GitHub', href: 'https://github.com/Sehar-Tahir', Icon: LuGithub },
+   { label: 'GHL Portfolio', href: 'https://sehar-portfolio.vibepreview.com', Icon: LuWorkflow },
   { label: 'Fiverr', href: 'http://fiverr.com/sehartahir_', Icon: TbBrandFiverr },
   { label: 'Upwork', href: 'https://www.upwork.com/freelancers/~01b04a5637e0dac34a', Icon: FaSquareUpwork },
 ]
@@ -130,11 +133,15 @@ const Footer = () => {
         </div>
       </div>
 
+     
+
       <div className="px-6 md:px-14 py-6 text-center bg-paper dark:bg-base border-t border-ink/10 dark:border-base-line">
         <p className="font-mono text-xs text-ink-muted dark:text-mist-muted">
           ©{new Date().getFullYear()} Sehar Tahir. All rights reserved. Built with &hearts; by ST.
         </p>
       </div>
+
+       <ScrollToTop />
     </>
   )
 }

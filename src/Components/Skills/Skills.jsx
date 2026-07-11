@@ -4,6 +4,7 @@ import { SiMui, SiVite, SiNodedotjs, SiMongodb, SiExpress, SiFigma } from 'react
 import { LuWorkflow, LuCalendarClock, LuMail, LuPlug, LuFilter } from 'react-icons/lu'
 import SectionHeading from '../Common/SectionHeading'
 import Reveal from '../Common/Reveal'
+import { LuArrowUpRight } from 'react-icons/lu'
 
 const stack = [
   {
@@ -30,6 +31,7 @@ const stack = [
       { name: 'Email/SMS Automation', Icon: LuMail },
       { name: 'Integrations', Icon: LuPlug },
     ],
+    link: 'https://sehar-portfolio.vibepreview.com',
   },
   {
     tag: 'tools',
@@ -89,6 +91,18 @@ const Skills = () => {
                         </div>
                       ))}
                     </div>
+                    {channel.link && (
+                      <a
+                        href={channel.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 mt-4 pt-2 border-t border-ink/5 dark:border-white/5
+                        text-sm font-medium text-accent dark:text-accent-soft
+                        hover:text-accent-strong dark:hover:text-white transition-colors duration-200"
+                      >
+                        View GHL Portfolio <LuArrowUpRight size={15} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </Reveal>

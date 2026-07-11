@@ -6,6 +6,7 @@ import { LuArrowUpRight } from 'react-icons/lu'
 const links = [
   { label: 'Home', href: '#Home' },
   { label: 'About', href: '#About' },
+  { label: 'Services', href: '#Services' },
   { label: 'Skills', href: '#Skills' },
   { label: 'Work', href: '#Projects' },
   { label: 'Experience', href: '#Experience' },
@@ -14,7 +15,7 @@ const links = [
 ]
 
 
-const desktopLinks = ['About', 'Skills', 'Work', 'Contact']
+const desktopLinks = ['About', 'Services', 'Skills', 'Work', 'Contact']
   .map((label) => links.find((link) => link.label === label))
 
 const Navbar = () => {
