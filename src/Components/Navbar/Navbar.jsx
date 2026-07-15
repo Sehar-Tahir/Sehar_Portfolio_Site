@@ -21,7 +21,7 @@ const desktopLinks = ['About', 'Services', 'Skills', 'Work', 'Contact']
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light')
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
 
   useEffect(() => {
     document.documentElement.classList.remove('dark', 'light')
