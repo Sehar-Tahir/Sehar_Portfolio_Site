@@ -1,12 +1,6 @@
 import Project2 from '../assets/Project2.png'
-import Project3 from '../assets/Project3.png'
 import Project5 from '../assets/Project5.png'
-import Project6 from '../assets/Project6.png'
 import Project7 from '../assets/Project7.png'
-import Portfolio from '../assets/Portfolio.png'
-import Amazon from '../assets/Amazon.png'
-import CreamyFun from '../assets/CreamyFun.png'
-import Spotify from '../assets/Spotify.png'
 import Auth from '../assets/Auth.png'
 import Weather from '../assets/Weather.png'
 import Task from '../assets/Task.png'
@@ -21,7 +15,7 @@ import BC from '../assets/BossCredit.png'
 
 // Fixed category list — used for filter tabs. Keep these exact strings
 // in sync with the `category` field on each project below.
-export const categories = ['Full Stack', 'Client Project', 'Frontend Project', 'Personal Project']
+export const categories = ['Full Stack', 'Client Project', 'Others']
 // Derives a role label from category/tech unless a project explicitly sets its own `role`.
 export const getRole = (project) => {
   if (project.role) return project.role
@@ -127,7 +121,7 @@ export const projects = [
   {
     slug: 'nexcent',
     title: 'Nexcent',
-    category: 'Frontend Project',
+    category: 'Others',
     imgsrc: Project2,
     gallery: [Project2],
     tec: 'React Js, Tailwind Css',
@@ -139,40 +133,10 @@ export const projects = [
     git: 'https://github.com/Sehar-Tahir/Nexcent-REACT_Landing_Page',
     demo: 'https://nexcent-react-landing-page.vercel.app/',
   },
-  {
-    slug: 'tailwind-project',
-    title: 'Tailwind Project',
-    category: 'Frontend Project',
-    imgsrc: Project3,
-    gallery: [Project3],
-    tec: 'Html, CSS, Tailwind Css',
-    oneLiner: 'A responsive landing page with organized sections and minimal design.',
-    desc: 'A responsive landing page built with well-organized sections, consistent spacing, and a minimal design approach for a smooth user experience.',
-    problem: 'Practicing utility-first CSS while keeping the layout fully responsive across breakpoints.',
-    approach: 'Structured the page section-by-section using Tailwind CSS utility classes, focusing on consistent spacing and a mobile-first build order.',
-    result: 'A fully responsive landing page with consistent visual rhythm from mobile to desktop.',
-    git: 'https://github.com/Sehar-Tahir/Responsive_Landing_Page-TailwindCss',
-    demo: 'https://responsive-landing-page-tailwind-css.vercel.app/',
-  },
-  {
-    slug: 'portfolio-original',
-    title: 'Personal Portfolio (Initial)',
-    category: 'Personal Project',
-    imgsrc: Portfolio,
-    gallery: [Portfolio],
-    tec: 'React, Email.js, Chatbot',
-    oneLiner: 'My personal portfolio showcasing projects, journey, and growth.',
-    desc: 'A personal portfolio website created to showcase my projects, journey, and growth while reflecting my design style and professional identity.',
-    problem: 'Needed a single place to present projects, skills, and experience to clients and recruiters.',
-    approach: 'Built with React and Tailwind CSS, integrated Email.js for a working contact form and a chatbot for interactive visitor engagement.',
-    result: 'A working portfolio used to land freelance clients and fellowship opportunities.',
-    git: 'https://github.com/Sehar-Tahir/Sehar_Portfolio',
-    demo: 'https://sehar-portfolio.vercel.app/',
-  },
-  {
+ {
     slug: 'web-dev-site',
     title: 'Web Dev Site',
-    category: 'Frontend Project',
+    category: 'Others',
     imgsrc: Project5,
     gallery: [Project5],
     tec: 'React Js, Material UI',
@@ -187,7 +151,7 @@ export const projects = [
   {
     slug: 'unigradebook',
     title: 'UniGradeBook',
-    category: 'Frontend Project',
+    category: 'Others',
     imgsrc: Project7,
     gallery: [Project7],
     tec: 'React Js, Tailwind Css',
@@ -200,83 +164,9 @@ export const projects = [
     demo: 'https://uni-gradebook.vercel.app/',
   },
   {
-    slug: 'bootstrap-project',
-    title: 'Bootstrap Project',
-    category: 'Frontend Project',
-    imgsrc: Project6,
-    gallery: [Project6],
-    tec: 'Html, CSS, Bootstrap',
-    oneLiner: 'A structured landing page with clean alignment and responsive layout.',
-    desc: 'A structured landing page focused on clean alignment, responsive layout, and balanced visual presentation for a professional look.',
-    problem: 'Building a fully responsive page using a component framework rather than custom CSS.',
-    approach: 'Used Bootstrap\u2019s grid system and utility classes to structure sections with consistent alignment and spacing.',
-    result: 'A clean, responsive landing page with a professional, balanced layout.',
-    demo: 'https://responsive-landing-page-alpha.vercel.app/',
-  },
-  {
-    slug: 'amazon-clone',
-    title: 'Amazon Clone',
-    category: 'Personal Project',
-    imgsrc: Amazon,
-    gallery: [Amazon],
-    tec: 'Html, CSS',
-    oneLiner: 'An e-commerce homepage replica with organized product sections.',
-    desc: 'A detailed e-commerce homepage replica designed to mirror market place layouts with organized product sections and navigation flow.',
-    problem: 'Practicing recreation of complex, real-world e-commerce layouts pixel by pixel.',
-    approach: 'Rebuilt the homepage structure using semantic HTML and CSS, focusing on grid-based product sections and navigation flow.',
-    result: 'A close visual replica demonstrating strong CSS layout fundamentals.',
-    git: 'https://github.com/Sehar-Tahir/Amazon-Clone',
-    demo: 'https://amazon-clone-five-ashy.vercel.app/',
-  },
-  {
-    slug: 'spotify-clone',
-    title: 'Spotify Clone',
-    category: 'Personal Project',
-    imgsrc: Spotify,
-    gallery: [Spotify],
-    tec: 'Html, CSS',
-    oneLiner: 'A music streaming platform replica with organized media sections.',
-    desc: 'A music streaming platform replica designed with structured playlists, organized media sections, and a clean interface inspired by modern audio applications.',
-    problem: 'Recreating a media-heavy, visually dense interface with clean CSS.',
-    approach: 'Structured playlists and media sections using CSS Grid and Flexbox for a modern, organized layout.',
-    result: 'A visually accurate clone demonstrating layout and media-interface design skills.',
-    git: 'https://github.com/Sehar-Tahir/Spotify-Clone',
-    demo: 'https://spotify-clone-bay-chi.vercel.app/',
-  },
-  {
-    slug: 'creamy-fun',
-    title: 'Creamy Fun',
-    category: 'Personal Project',
-    imgsrc: CreamyFun,
-    gallery: [CreamyFun],
-    tec: 'Html, CSS',
-    oneLiner: 'A playful, visually engaging website with an easy-to-navigate layout.',
-    desc: 'A visually engaging website concept created with attractive sections, playful structure, and an easy-to-navigate layout.',
-    problem: 'Designing a fun, playful brand feel without sacrificing usability.',
-    approach: 'Used bold sections and colors with CSS, keeping navigation simple and structure predictable.',
-    result: 'An engaging, easy-to-navigate site with a distinct playful identity.',
-    git: 'https://github.com/Sehar-Tahir/Creamy_Fun',
-    demo: 'https://creamy-fun.vercel.app/',
-  },
-  // {
-  //   slug: 'mern-auth-backend',
-  //   title: 'MERN Auth - Backend',
-  //   category: 'Full Stack',
-  //   imgsrc: Auth,
-  //   gallery: [Auth],
-  //   tec: 'MERN - Backend',
-  //   oneLiner: 'A secure authentication system managing access and protected data.',
-  //   desc: 'A secure authentication system developed to manage user access, validation processes, and protected data handling.',
-  //   problem: 'Securing user data and access with a robust authentication backend.',
-  //   approach: 'Built REST APIs with Node.js and Express, MongoDB for storage, and secure password handling for validation.',
-  //   result: 'A working, secure authentication backend integrated with the frontend.',
-  //   git: 'https://github.com/Sehar-Tahir/MERN-Auth/tree/main/backend',
-  //   demo: 'https://mern-auth-backend-navy.vercel.app/',
-  // },
-  {
     slug: 'weather-now',
     title: 'Weather Now',
-    category: 'Frontend Project',
+    category: 'Others',
     imgsrc: Weather,
     gallery: [Weather],
     tec: 'Html, CSS, Javascript',
@@ -291,7 +181,7 @@ export const projects = [
   {
     slug: 'task-tracker',
     title: 'Task Tracker',
-    category: 'Frontend Project',
+    category: 'Others',
     imgsrc: Task,
     gallery: [Task],
     tec: 'Html, CSS, Js, React',
@@ -306,7 +196,7 @@ export const projects = [
   {
     slug: 'registration-form',
     title: 'Registration Form',
-    category: 'Frontend Project',
+    category: 'Others',
     imgsrc: Form,
     gallery: [Form],
     tec: 'Html, CSS, Js',
@@ -321,7 +211,7 @@ export const projects = [
   {
     slug: 'password-generator',
     title: 'Password Generator',
-    category: 'Personal Project',
+    category: 'Others',
     imgsrc: Password,
     gallery: [Password],
     tec: 'Html, CSS, Javascript, React',
@@ -336,7 +226,7 @@ export const projects = [
   {
     slug: 'easydo',
     title: 'EasyDo',
-    category: 'Frontend Project',
+    category: 'Others',
     imgsrc: EasyDo,
     gallery: [EasyDo],
     tec: 'Html, CSS, Javascript, React',
