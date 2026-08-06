@@ -12,6 +12,7 @@ import UniHirexImg from '../assets/unihirex.png'
 import MemoryGalaxyImg from '../assets/galaxy.png'
 import KW from '../assets/KW.png'
 import BC from '../assets/BossCredit.png'
+import IUB from '../assets/IUB.png'
 
 // Fixed category list — used for filter tabs. Keep these exact strings
 // in sync with the `category` field on each project below.
@@ -59,20 +60,20 @@ export const projects = [
   status: 'Available soon',
 },
 {
-    slug: 'mern-auth-frontend',
-    title: 'MERN Auth',
-    category: 'Full Stack',
-    imgsrc: Auth,
-    gallery: [Auth],
-    tec: 'MERN - Frontend',
-    oneLiner: 'A smooth registration and login interface with clear interaction flow.',
-    desc: 'A user authentication interface designed to provide a smooth registration and login experience with clear interaction flow.',
-    problem: 'Building an intuitive authentication flow for a full-stack MERN application.',
-    approach: 'Designed the login/register forms in React with validation feedback and clean state handling.',
-    result: 'A smooth, validated auth flow connected to the corresponding backend.',
-    git: 'https://github.com/Sehar-Tahir/MERN-Auth/tree/main/frontend',
-    demo: 'https://mern-auth-frontend-ecru.vercel.app/',
-  },
+  slug: 'IUB-affliliation-portal',
+  title: 'IUB Affliliation Portal',
+  category: 'Full Stack',
+  imgsrc: IUB,
+  gallery: [IUB],
+  tec: 'Html, CSS, Javascript, tailwind CSS',
+  oneLiner: 'Redesigned the existing Islamia University of Bhawalpur (IUB) Affiliation Portal',
+  desc: 'A fully redesigned IUB Affiliation Portal with a modern, responsive interface.',
+  problem: 'The existing IUB Affiliation Portal was outdated and lacked a user-friendly interface, making it difficult for students to navigate and engage with campus affiliations.',
+  approach: 'Redesigned the IUB Affiliation Portal with a modern, responsive interface using HTML, CSS, JavaScript, and Tailwind CSS, focusing on improving navigation and user engagement.',
+  result: 'A fully redesigned IUB Affiliation Portal that enhances user experience, making it easier for students to access information and engage with campus affiliations.',
+  git: 'https://github.com/Sehar-Tahir/IUB-Affiliation-Portal_Redesign',
+  demo: 'https://iub-affiliation-portal-redesign.vercel.app/',
+},
 {
   slug: 'karachi-weather',
   title: 'Karachi Weather',
@@ -85,8 +86,8 @@ export const projects = [
   problem: 'The client needed a weather application that felt custom-built rather than a generic API wrapper, with a polished, branded interface.',
   approach: 'Built a full-stack MERN application with a custom hero section and dynamic theming that responds to live weather conditions, alongside a clean, responsive search interface.',
   result: 'A working real-time weather platform with a distinct, branded visual identity for the client.',
-  git: 'https://github.com/Sehar-Tahir/Sehar_Portfolio',
-  demo: 'https://sehar-portfolio.vercel.app/',
+  git: 'https://github.com/Sehar-Tahir/KarachiWeather',
+  demo: 'https://karachi-weather-kw.vercel.app/',
 },
 {
   slug: 'boss-credit',
@@ -100,8 +101,8 @@ export const projects = [
   problem: 'The client\u2019s existing GoHighLevel site felt outdated and didn\u2019t reflect the credibility needed for a financial services business.',
   approach: 'Redesigned the site structure and layout inside GoHighLevel, focusing on a cleaner visual hierarchy and more modern section design.',
   result: 'A refreshed, more professional-looking site that better represents the client\u2019s credit services business.',
-  git: 'https://github.com/Sehar-Tahir/Sehar_Portfolio',
-  demo: 'https://sehar-portfolio.vercel.app/',
+  git: 'https://sites.leadconnectorhq.com/preview/3qeXvAXJBlpgBnaB2us9',
+  demo: 'https://sites.leadconnectorhq.com/preview/3qeXvAXJBlpgBnaB2us9',
 },
  {
     slug: 'chatbot',
@@ -162,6 +163,21 @@ export const projects = [
     result: 'A functional tool that helps students make more informed academic decisions.',
     git: 'https://github.com/Sehar-Tahir/UniGradebook',
     demo: 'https://uni-gradebook.vercel.app/',
+  },
+  {
+    slug: 'mern-auth-frontend',
+    title: 'MERN Auth',
+    category: 'others',
+    imgsrc: Auth,
+    gallery: [Auth],
+    tec: 'MERN - Frontend',
+    oneLiner: 'A smooth registration and login interface with clear interaction flow.',
+    desc: 'A user authentication interface designed to provide a smooth registration and login experience with clear interaction flow.',
+    problem: 'Building an intuitive authentication flow for a full-stack MERN application.',
+    approach: 'Designed the login/register forms in React with validation feedback and clean state handling.',
+    result: 'A smooth, validated auth flow connected to the corresponding backend.',
+    git: 'https://github.com/Sehar-Tahir/MERN-Auth-Frontend',
+    demo: 'https://mern-auth-frontend-ecru.vercel.app/',
   },
   {
     slug: 'weather-now',

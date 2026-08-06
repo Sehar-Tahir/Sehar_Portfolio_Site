@@ -17,8 +17,8 @@ const ProjectDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    if (project) document.title = `${project.title} — Sehar Tahir`
-    return () => { document.title = 'Sehar Tahir — Web Developer & GHL Automation Specialist' }
+    if (project) document.title = `${project.title} - Sehar Tahir`
+    return () => { document.title = 'Sehar Tahir - Web Developer & GHL Automation Specialist' }
   }, [project])
 
   if (!project) {

@@ -19,7 +19,7 @@ const experience = [
     role: 'React & Next.js Fellowship',
     org: 'Bytewise Limited',
     period: 'June 2024 - September 2024',
-    highlight: 'Awarded Top Performer of the Month',
+    highlight: 'Awarded as Top Performer of the Month',
     desc: 'Hands-on experience and a strong foundation in modern frontend development building responsive, reusable UIs with React, and clean, accessible designs with Material UI and Tailwind CSS. Strengthened component-based architecture and frontend best practices.',
   },
   {
@@ -64,7 +64,7 @@ const Experience = () => {
                   <p className="text-sm text-accent dark:text-accent-soft mt-0.5">{item.org}</p>
 
                   {item.highlight && (
-                    <p className="text-xs font-mono text-signal mt-2">★ {item.highlight}</p>
+                    <p className="text-xs font-mono text-yellow-300 mt-2">★ {item.highlight}</p>
                   )}
 
                   <p className="text-sm leading-relaxed text-ink-muted dark:text-mist-muted mt-3">
