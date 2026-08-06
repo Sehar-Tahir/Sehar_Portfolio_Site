@@ -24,7 +24,7 @@ const Projects = () => {
         <SectionHeading
           path="/work"
           title="Selected work"
-          subtitle="A mix of full-stack builds, client work, and personal projects spanning React apps, MERN apps, GHL(GoHighLevel) and no-code automation."
+          subtitle="A mix of full-stack builds, client work, fellowship builds, and personal projects spanning React apps, MERN apps, no-code integrations and GHL (GoHighLevel) websites."
         />
 
         {featured && (
