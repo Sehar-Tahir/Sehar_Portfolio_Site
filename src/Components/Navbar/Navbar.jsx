@@ -1,12 +1,12 @@
 import { RiCloseLine, RiMenu2Line } from '@remixicon/react'
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { FaSun, FaMoon } from 'react-icons/fa'
 import { LuArrowUpRight } from 'react-icons/lu'
 
 const links = [
   { label: 'Home', href: '#Home' },
   { label: 'About', href: '#About' },
-  { label: 'Services', href: '#Services' },
   { label: 'Skills', href: '#Skills' },
   { label: 'Work', href: '#Projects' },
   { label: 'Experience', href: '#Experience' },
@@ -14,14 +14,16 @@ const links = [
   { label: 'Contact', href: '#Contact' },
 ]
 
-
-const desktopLinks = ['About', 'Services', 'Skills', 'Work', 'Contact']
+const desktopLinks = ['About', 'Skills', 'Work', 'Contact']
   .map((label) => links.find((link) => link.label === label))
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+  const resolveHref = (href) => (isHome ? href : `/${href}`)
 
   useEffect(() => {
     document.documentElement.classList.remove('dark', 'light')
@@ -50,7 +52,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between px-6 md:px-14 py-4">
         {/* Logo */}
-        <a href="#Home" className="flex items-center gap-2 group">
+        <a href={resolveHref('#Home')} className="flex items-center gap-2 group">
           <span className="w-2 h-2 rounded-full bg-accent group-hover:animate-pulse" />
           <span className="font-display text-lg font-semibold tracking-tight text-ink dark:text-mist">
             Sehar Tahir
@@ -62,7 +64,7 @@ const Navbar = () => {
           {desktopLinks.map((link) => (
             <li key={link.href}>
               <a
-                href={link.href}
+                href={resolveHref(link.href)}
                 className="px-3 py-2 rounded-full hover:text-accent dark:hover:text-accent-soft hover:bg-accent/5 transition-colors duration-200"
               >
                 {link.label}
@@ -82,10 +84,11 @@ const Navbar = () => {
           </button>
 
           <a
-            href="#Contact"
+            href={resolveHref('#Contact')}
             className="hidden md:inline-flex font-mono text-xs px-4 py-2 rounded-full bg-accent text-white hover:bg-accent-strong transition-colors duration-200 shadow-glowSm"
           >
-            Hire Me <LuArrowUpRight />       </a>
+            Hire Me <LuArrowUpRight />
+          </a>
 
           <button
             className="md:hidden w-9 h-9 flex items-center justify-center text-ink dark:text-mist"
@@ -104,7 +107,7 @@ const Navbar = () => {
             {links.map((link) => (
               <li key={link.href}>
                 <a
-                  href={link.href}
+                  href={resolveHref(link.href)}
                   onClick={() => setMenuOpen(false)}
                   className="block px-3 py-2.5 rounded-lg hover:text-accent hover:bg-accent/5 transition-colors duration-200"
                 >

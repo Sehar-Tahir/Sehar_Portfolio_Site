@@ -8,10 +8,13 @@ import Footer from "../Components/Footer/Footer"
 import Experience from "../Components/Experience/Experience"
 import Education from "../Components/Education/Education"
 import Certificates from "../Components/Certifications/Certificates"
+import ScrollToHash from '../Components/Common/ScrollToHash'
+
 
 const LandingPage = () => {
   return (
     <div className="bg-paper dark:bg-base text-ink dark:text-mist transition-colors duration-300">
+      <ScrollToHash />
       <Navbar />
       <Home />
       <About />
